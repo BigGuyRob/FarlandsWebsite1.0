@@ -5,24 +5,45 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        .split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 60px;
+}
 
+/* Control the left side */
+.left {
+  left: 0;
+
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+}
+    </style>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/home"><img src="/assets/logonav.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">The Farlands</a>
+        <a class="navbar-brand" href="/home"><img src="/assets/logonav.png" width=30 height=30 class="d-inline-block align-top" alt="" loading="lazy">The Farlands</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Profile<span class="sr-only">(current)</span></a>
-            </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Cities</a>
+            </li>
+            <li>
+                <a class = "nav-link" href="#">Live Map</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -39,9 +60,35 @@
             <button class="btn btn-outline-danger my-2 my-sm-0" >Log Out</button>
           </form>
         </div>
-      </nav>
-      <!-- iframe src="https://discordapp.com/widget?id=565708710597492756&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"--></iframe>
-      <iframe src="http://23.235.255.10:53293/" width="50%" height="500"></iframe>
+    </nav>
+    <div>
+        <div class = "split left">
+            <div class="card" style="width: 18rem;">
+                <img src="/assets/logonav.png" class="card-img-top" alt="Player Avatar Here">
+                <div class="card-body">
+                <h5 class="card-title">Player Name</h5>
+                </div>
+            </div>
+        <p>Below are the areas in The Farlands that you have permits for</p>
+            <div style="width: 18rem;">
+                <ul class="list-group">
+                    <a class="list-group-item list-group-item-action">Spawn</a>
+                    <a class="list-group-item list-group-item-action">New New Brunswick</a>
+                    <a class="list-group-item list-group-item-action">Tyler's Facility</a>
+                </ul>
+            </div>
+        </div>
+        <div class = "split right">
+            <div class = "split right">
+                <iframe src="https://discordapp.com/widget?id=565708710597492756&theme=dark" height="500" allowtransparency="true" frameborder="0"></iframe>
+            </div>
+            <div class = "split left">
+                <iframe src="http://23.235.255.10:53293/" height="500"></iframe>
+            </div>
+        </div>
+    </div>
+      
+      
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
