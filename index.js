@@ -27,7 +27,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-mongoose.connect('mongodb+srv://Rob:Rob@cluster0.gyp00.mongodb.net/whitelist?retryWrites=true&w=majority', { useUnifiedTopology: true, useNewUrlParser: true });
+mongoose.connect(MONGOCONNECTIONSTRING', { useUnifiedTopology: true, useNewUrlParser: true });
 mongoose.set("useCreateIndex", true); //remove deprecation warning
 
 const playerSchema = new mongoose.Schema({
